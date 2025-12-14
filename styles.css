@@ -1,0 +1,134 @@
+/* --- A. Basic Global Styling (PC & Mobile) --- */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9; /* Light background */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Style the input form and its sections */
+#costCalculator {
+    max-width: 900px; /* Slightly wider to accommodate more fields on PC */
+    margin: 0 auto; /* Centers the calculator on the page */
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    /* Use CSS Grid for better organization of fields within a section */
+    display: grid; 
+    grid-template-columns: 1fr; /* Default to single column for all devices */
+    gap: 15px; /* Spacing between grid items */
+}
+
+/* Apply a two-column layout for inputs on wider screens (PC) */
+@media (min-width: 768px) {
+    fieldset {
+        /* On PC, make the fieldset a 2-column grid */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    /* Make the titles and notes span across both columns */
+    fieldset h3, fieldset p.note {
+        grid-column: 1 / -1; 
+    }
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #007bff; /* Blue color for section titles */
+    font-size: 1.2em;
+}
+
+/* Style for all labels and inputs */
+label {
+    display: block; 
+    font-weight: 500;
+}
+
+input[type="number"] {
+    width: 100%; 
+    padding: 12px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+/* Style the calculation button */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background-color: #28a745; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e7e34;
+}
+
+/* Style the Results section */
+#results {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    border-left: 5px solid #007bff;
+}
+
+#results h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#results h3 {
+    color: #dc3545; /* Red for final numbers */
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+#results p {
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.summary-cost {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.1em;
+    margin-top: 15px;
+    border-top: 1px dashed #aaa;
+    padding-top: 10px;
+}
+
+.note {
+    font-size: 0.85em;
+    color: #6c757d;
+    margin-top: -10px; /* Pull closer to the section above */
+}
+
+/* --- B. Responsiveness with Media Queries --- */
+
+/* This rule only applies when the screen width is
