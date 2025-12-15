@@ -14,6 +14,17 @@
 
     <main>
         <form id="costCalculator">
+            <form id="costCalculator">
+    
+    <fieldset>
+        <legend>📝 Product Identification</legend>
+        <label for="designName">Design Name / Product SKU:</label>
+        <input type="text" id="designName" placeholder="e.g., Luxury Chiffon Zari Suit V3" required>
+    </fieldset>
+    
+    <fieldset>
+        <legend>🧵 1. Direct Material Costs (DMC) Per Suit</legend>
+        ```
 
             <fieldset>
                 <legend>🧵 1. Direct Material Costs (DMC) Per Suit</legend>
@@ -98,6 +109,12 @@
             </fieldset>
 
             <button type="submit">Calculate Total Cost & Price</button>
+            <div class="button-group">
+    <button type="submit" id="calculateBtn">Calculate Cost Sheet</button>
+    
+    <button type="button" id="saveSheetBtn" style="background-color: #4CAF50;">Save Design</button> 
+
+</div>
 
             <section id="results">
                 <h2>📊 Detailed Results Per Suit</h2>
@@ -126,6 +143,28 @@
             </section>
 
         </form>
+    
+    <section id="saved-sheets-section">
+        <h2>🧾 Saved Cost Sheets for S PARI COTTON LLP</h2>
+        <div class="table-container">
+            <table id="costSheetsTable">
+                <thead>
+                    <tr>
+                        <th>Design Name / SKU</th>
+                        <th>Total Cost (TCS)</th>
+                        <th>Target Price</th>
+                        <th>Break-Even Units</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+        <p id="no-data-message" style="text-align: center; margin-top: 20px; font-style: italic; color: #666;">
+            No cost sheets saved yet. Calculate a design and click 'Save Design' to begin your ledger.
+        </p>
+    </section>
     </main>
 
     <footer>
@@ -135,3 +174,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
