@@ -71,34 +71,7 @@
                 <label for="finishingCost">Finishing, Pressing & QC Cost (per suit):</label>
                 <input type="number" id="finishingCost" placeholder="e.g., 15.00">
             </fieldset>
-        <fieldset class="results-box">
-    <legend>🏭 Total Cost of Goods Sold (TCS) Results</legend>
-    <ul>
-        <li>
-            <span class="result-label">Total Variable Cost (DMC + DLC):</span>
-            <span class="result-value" id="resultVariable">₹0.00</span>
-        </li>
-        <li>
-            <span class="result-label">Manufacturing Overhead (MOH) per Unit:</span>
-            <span class="result-value" id="resultMOHUnit">₹0.00</span>
-        </li>
-        <li>
-            <span class="result-label">COST OF GOODS MANUFACTURED (COGM) per Unit:</span>
-            <span class="result-value" id="resultCOGM">₹0.00</span>
-        </li>
-        <li>
-            <span class="result-label">SG&A (Selling, G&A) per Unit:</span>
-            <span class="result-value" id="resultFixed">₹0.00</span>
-        </li>
-        <li>
-            <span class="result-label total-cost-label">TOTAL COST PER SUIT (TCS):</span>
-            <span class="result-value total-cost-value" id="resultTCS">₹0.00</span>
-        </li>
-    </ul>
-</fieldset>
 
-
-        
 
             <fieldset>
                 <legend>🏭 3. Monthly Overheads & Volume</legend>
@@ -158,7 +131,7 @@
 
             <button type="submit">Calculate Total Cost & Price</button>
             <div class="button-group">
-    <button type="submit" id="calculateBtn">Calculate Cost Sheet</button>
+   
     
     <button type="button" id="saveSheetBtn" style="background-color: #4CAF50;">Save Design</button> 
 
@@ -191,28 +164,6 @@
             </section>
 
         </form>
-    
-    <section id="saved-sheets-section">
-        <h2>🧾 Saved Cost Sheets for S PARI COTTON LLP</h2>
-        <div class="table-container">
-            <table id="costSheetsTable">
-                <thead>
-                    <tr>
-                        <th>Design Name / SKU</th>
-                        <th>Total Cost (TCS)</th>
-                        <th>Target Price</th>
-                        <th>Break-Even Units</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    </tbody>
-            </table>
-        </div>
-        <p id="no-data-message" style="text-align: center; margin-top: 20px; font-style: italic; color: #666;">
-            No cost sheets saved yet. Calculate a design and click 'Save Design' to begin your ledger.
-        </p>
-    </section>
     </main>
 
     <footer>
@@ -222,6 +173,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
